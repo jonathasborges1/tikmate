@@ -11,7 +11,7 @@ export async function fetchDownloadUrl(inputUrl: string, apiUrl: string) {
   const data = await response.json();
   if (data.success && data.token && data.id) {
     return {
-      url: `https://tikmate.app/download/${data.token}/${data.id}.mp4?hd=1`,
+      url: `https://tikmate.app/download/${data.token}/${data.id}.mp4`,
       cover: data?.cover,
     };
   } else {
